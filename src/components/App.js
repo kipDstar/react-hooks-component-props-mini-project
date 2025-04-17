@@ -4,10 +4,18 @@ import blogData from "../data/blog";
 console.log(blogData);
 
 function App() {
+  function Header() {
+    return (
+      <header>
+        <img src={blogData.image} alt="blog logo" />
+        <h1>{blogData.name}</h1>
+        <p>{blogData.about}</p>
+      </header>
+    );
+  }
   return (
     <div className="App">
-      You're on your own from here! Follow the deliverables; test things out in
-      the browser as you write your code; and good luck!
+     {Header()}
     </div>
   );
 }
