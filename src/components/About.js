@@ -1,16 +1,15 @@
 import React from "react";
-import blogData from "../data/blog";
 
-function About() {
+function About({ image = "https://via.placeholder.com/215", about }) {
     return (
         <aside>
             <img 
-                src={blogData.image || "https://via.placeholder.com/215"} 
+                src={image}
                 alt="blog logo" 
             />
-            <p className="about">{blogData.about}</p>
+            <p className="about">{about}</p>
         </aside>
-    ); 
+    );
 }
 
 export default About;
